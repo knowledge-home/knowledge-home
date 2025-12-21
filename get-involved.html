@@ -166,45 +166,42 @@
           </div>
     
           <!-- RIGHT: HIGHLIGHTED FORM (CSS auto-applies here) -->
+          <!-- RIGHT: HIGHLIGHTED FORM (CSS auto-applies here) -->
           <div class="panel reveal">
             <form id="volunteerForm" class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
               <h3>Volunteer form</h3>
-            
+          
               <input type="hidden" name="_subject" value="Volunteer Interest — Knowledge Home" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
-            
-              <div class="row2">
-                <input class="input" name="Name" placeholder="Full name" required />
-                <input class="input" name="City" placeholder="Country / City (e.g., New York, USA)" required />
-              </div>
-            
-              <div class="row2">
-                <input class="input" name="Email" type="email" placeholder="Email" required />
-                <select class="input" name="Role" required>
-                  <option>Mentor (Academic support)</option>
-                  <option>Mentor (Career guidance)</option>
-                  <option>Program support (Delivery + coordination)</option>
-                  <option>Volunteer (Kit drive / logistics)</option>
-                  <option>Community partner coordinator</option>
-                  <option>Digital support (Devices / tools)</option>
-                  <option>Content creator (Learning resources)</option>
-                  <option>Outreach (Partnerships / community)</option>
-                  <option>Fundraising / Sponsorships</option>
-                  <option>Impact support (Tracking / reporting)</option>
-                  <option>Operations / Documentation</option>
-                </select>
-              </div>
-            
+          
+              <input class="input" name="Name" placeholder="Full name" required />
+              <input class="input" name="City" placeholder="Country / City (e.g., New York, USA)" required />
+          
+              <input class="input" name="Email" type="email" placeholder="Email" required />
+          
+              <select class="input" name="Role" required>
+                <option>Mentor (Academic support)</option>
+                <option>Mentor (Career guidance)</option>
+                <option>Program support (Delivery + coordination)</option>
+                <option>Volunteer (Kit drive / logistics)</option>
+                <option>Community partner coordinator</option>
+                <option>Digital support (Devices / tools)</option>
+                <option>Content creator (Learning resources)</option>
+                <option>Outreach (Partnerships / community)</option>
+                <option>Fundraising / Sponsorships</option>
+                <option>Impact support (Tracking / reporting)</option>
+                <option>Operations / Documentation</option>
+              </select>
+          
               <textarea class="input" name="Message" rows="6"
                 placeholder="Availability (days/timezone), skills, and what you’d like to help with…"></textarea>
-            
+          
               <button class="btn btn--primary" type="submit">Send</button>
-            
+          
               <!-- Flash message (AJAX success / error) -->
               <div id="volunteerFlash" class="form-flash" aria-live="polite"></div>
             </form>
-
           </div>
         </div>
     
