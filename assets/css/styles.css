@@ -328,6 +328,24 @@ p { margin: 0; color: var(--muted); }
 
 .hero__left, .hero__right { height: 100%; }
 
+/* Homepage: lighter hero density */
+.hero--lite .hero-points {
+  display: none;
+}
+
+/* safety: if old markup exists */
+.hero--lite .chips {
+  margin-top: 14px;
+}
+
+.hero--lite .impact-strip {
+  margin-top: 18px;
+}
+
+.hero--lite .hero-lede {
+  max-width: 52ch;
+}
+
 /* Points */
 .hero-points {
   list-style: none;
@@ -504,54 +522,194 @@ p { margin: 0; color: var(--muted); }
 }
 
 /* =========================================================
-   RIGHT SNAPSHOT
+   SNAPSHOT v2 — IMPRESSIVE ROWS (tiny pills, clean alignment)
+   Keep your HTML as-is.
 ========================================================= */
-.snapshot {
-  border-radius: var(--r30);
-  border: 1px solid rgba(255, 255, 255, .14);
-  background: rgba(255, 255, 255, .03);
-  box-shadow: var(--shadow2);
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+
+.snapshot--v2 {
   display: flex;
   flex-direction: column;
-}
+  gap: 14px;
+  padding: 14px;
+  border-radius: 28px;
 
-.snapshot::before {
-  content: "";
-  position: absolute;
-  inset: -180px -220px auto -220px;
-  height: 340px;
   background:
-    radial-gradient(closest-side, rgba(92, 246, 181, .14), transparent 72%),
-    radial-gradient(closest-side, rgba(72, 168, 255, .16), transparent 70%),
-    radial-gradient(closest-side, rgba(168, 95, 255, .12), transparent 72%),
-    radial-gradient(closest-side, rgba(255, 120, 205, .10), transparent 76%);
-  filter: blur(22px);
-  opacity: .92;
-  pointer-events: none;
+    radial-gradient(1200px 520px at 12% 0%, rgba(88, 170, 255, .16), transparent 60%),
+    radial-gradient(900px 520px at 90% 100%, rgba(124, 92, 255, .16), transparent 60%),
+    rgba(0, 0, 0, .22);
+
+  border: 1px solid rgba(255, 255, 255, .10);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .65), inset 0 1px 0 rgba(255, 255, 255, .06);
+
+  min-width: 0;
 }
 
-.snapshot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, 0));
-  opacity: .55;
-  pointer-events: none;
-}
-
-.snapshot > * { position: relative; z-index: 1; }
-
-.snapshot__top {
+.snapshot--v2 .snapshot__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* Grid */
+.snapshot--v2 .snap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-bottom: 14px;
+  min-width: 0;
+}
+
+.snapshot--v2 .snap-item {
+  border-radius: 22px;
+  padding: 16px;
+
+  background:
+    radial-gradient(700px 260px at 10% 0%, rgba(255, 255, 255, .05), transparent 60%),
+    rgba(255, 255, 255, .035);
+
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06);
+  min-width: 0;
+}
+
+.snapshot--v2 .snap-item--wide {
+  grid-column: 1 / -1;
+}
+
+.snapshot--v2 .snap-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  min-width: 0;
+}
+
+.snapshot--v2 .snap-emoji {
+  font-size: 14px;
+  line-height: 1;
+  opacity: .92;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .45));
+}
+
+.snapshot--v2 .snap-title {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+/* Points list */
+.snapshot--v2 .snap-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* =========================================================
+   THE KEY CHANGE:
+   Each row becomes a 2-line grid:
+   - line 1: tiny pill (top-left)
+   - line 2: value text (full width)
+========================================================= */
+.snapshot--v2 .snap-points li {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 6px;
+
+  padding: 10px 12px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .025));
+
+  min-width: 0;
+}
+
+/* Tiny “eyebrow” pill */
+.snapshot--v2 .snap-points .k {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 7px;
+  /* ✅ very small */
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+
+  color: rgba(247, 248, 251, .60);
+
+  padding: 2px 6px;
+  /* ✅ small pill */
+  border-radius: 999px;
+
+  background: rgba(0, 0, 0, .28);
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  white-space: nowrap;
+}
+
+/* Value line (main content) */
+.snapshot--v2 .snap-points .v {
+  font-size: 12px;
+  color: rgba(247, 248, 251, .88);
+  line-height: 1.25;
+
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* ✅ prevents ugly broken words */
+}
+
+/* Hover polish */
+.snapshot--v2 .snap-points li:hover {
+  border-color: rgba(255, 255, 255, .16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+}
+
+/* CTA */
+.snapshot--v2 .snapshot__cta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 6px;
+}
+
+/* Responsive */
+@media (max-width:900px) {
+  .snapshot--v2 {
+    padding: 16px;
+  }
+
+  .snapshot--v2 .snap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Let values wrap on mobile */
+  .snapshot--v2 .snap-points .v {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .snapshot--v2 .snapshot__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .snapshot--v2 .snapshot__cta .btn {
+    width: 100%;
+  }
 }
 
 .pill {
@@ -2008,7 +2166,9 @@ form.form .btn { width: 100%; }
 @media (max-width: 560px) {
   .footer-cols { grid-template-columns: 1fr; row-gap: 20px; }
   .back-to-top { align-self: flex-end; }
-  .chips { grid-template-columns: 1fr; }
+    .chips {
+      grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* =========================================================
