@@ -59,6 +59,32 @@
 }
 
 /* =========================================================
+   Anchor / hash link fixes for sticky header
+========================================================= */
+
+/* If your header height differs, set this to match */
+:root {
+  --anchorOffset: 52px;
+}
+
+/* adjust if needed */
+
+/* Modern browsers: offset anchor positioning */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--anchorOffset);
+}
+
+/* Extra safety: when any element is the anchor target */
+:target {
+  scroll-margin-top: var(--anchorOffset);
+}
+
+/* Best practice: apply to sections/headings that you link to */
+[id] {
+  scroll-margin-top: var(--anchorOffset);
+}
+/* =========================================================
    RESET / BASE
 ========================================================= */
 * { box-sizing: border-box; }
@@ -1985,7 +2011,7 @@ form.form .btn { width: 100%; }
   /* Donate button */
   .nav-cta .btn--donate {
     padding: 6px 9px !important;
-    font-size: 7.5px !important;
+    font-size: 8px !important;
     border-radius: 12px !important;
     box-shadow:
       0 10px 24px rgba(0, 0, 0, .45),
@@ -1995,7 +2021,7 @@ form.form .btn { width: 100%; }
   /* Contact button */
   .nav-cta .btn--ghost {
     padding: 6px 9px !important;
-    font-size: 7.5px !important;
+    font-size: 8px !important;
     border-radius: 12px !important;
   }
 
