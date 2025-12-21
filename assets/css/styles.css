@@ -2428,6 +2428,52 @@ form.form .btn {
 }
 
 /* =========================================================
+   FOOTER — Mobile layout like Brandsap (2 columns)
+   - Brand/intro spans full width
+   - Remaining footer columns become 2-column grid
+========================================================= */
+@media (max-width: 560px) {
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;   /* ✅ 2 columns on mobile */
+    column-gap: 18px;
+    row-gap: 26px;
+    padding: 28px 0 14px;
+  }
+
+  /* ✅ Make the first footer column (brand/intro) span full width */
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+    padding-right: 0;
+  }
+
+  /* Slightly tighter link spacing like the reference */
+  .footer-col-title {
+    margin-bottom: 10px;
+  }
+
+  .footer-col a {
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  /* Bottom bar spacing */
+  .footer-bottom {
+    padding: 14px 0 18px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 920px) {
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================================
    OPTIONAL helper (kept, not global)
 ========================================================= */
 .subhead {
