@@ -1,0 +1,124 @@
+<!-- partials/header.html -->
+<header class="site-header" id="top">
+    <div class="navbar container">
+        <a class="brand" href="index.html">
+            <img src="assets/img/logo.svg" alt="Knowledge Home logo" />
+            <div class="brand-text">
+                <span class="brand-name">Knowledge Home</span>
+                <p class="brand-tagline">Knowledge Brings Hope</p>
+            </div>
+        </a>                     
+
+        <nav class="nav-links" aria-label="Primary">
+            <a data-nav href="index.html">Home</a>
+            <a data-nav href="programs.html">Programs</a>
+
+            <!-- Get Involved mega -->
+            <div class="mega-wrap">
+                <button type="button" data-mega-btn data-mega-target="mega-involved" aria-expanded="false">
+                    Get Involved
+                </button>
+
+                <div class="mega" id="mega-involved" data-mega role="dialog" aria-label="Get involved menu">
+                    <div class="mega-grid">
+                        <div class="mega-col">
+                            <div class="mega-title">Volunteer</div>
+                            <a class="mega-item" href="get-involved.html#roles"><b>Explore roles</b><span>Mentor, ops,
+                                    outreach</span></a>
+                            <a class="mega-item" href="get-involved.html#form"><b>Volunteer form</b><span>Submit your
+                                    interest</span></a>
+                            <a class="mega-item" href="get-involved.html"><b>Get involved overview</b><span>All options
+                                    in one place</span></a>
+                        </div>
+
+                        <div class="mega-col">
+                            <div class="mega-title">Mentorship</div>
+                            <a class="mega-item" href="programs.html#mentor"><b>Mentor students</b><span>Remote-friendly
+                                    sessions</span></a>
+                            <a class="mega-item" href="get-involved.html#roles"><b>Career guidance</b><span>Resume +
+                                    interview help</span></a>
+                        </div>
+
+                        <div class="mega-col">
+                            <div class="mega-title">Support</div>
+                            <a class="mega-item" href="donate.html"><b>Donate</b><span>One-time or monthly</span></a>
+                            <a class="mega-item" href="contact.html"><b>Partner</b><span>Schools, NGOs,
+                                    sponsors</span></a>
+                            <a class="mega-item" href="tracking.html"><b>Tracking</b><span>See allocation &
+                                    updates</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources mega -->
+            <div class="mega-wrap">
+                <button type="button" data-mega-btn data-mega-target="mega-resources" aria-expanded="false">
+                    Resources
+                </button>
+
+                <div class="mega" id="mega-resources" data-mega role="dialog" aria-label="Resources menu">
+                    <div class="mega-grid">
+                        <div class="mega-col">
+                            <div class="mega-title">Company</div>
+                            <a class="mega-item" href="about.html"><b>About</b><span>Mission, values,
+                                    approach</span></a>
+                            <a class="mega-item" href="contact.html"><b>Contact</b><span>Partner or volunteer</span></a>
+                        </div>
+
+                        <div class="mega-col">
+                            <div class="mega-title">Programs</div>
+                            <a class="mega-item" href="programs.html#kits"><b>Learning kits</b><span>Books +
+                                    essentials</span></a>
+                            <a class="mega-item" href="programs.html#mentor"><b>Mentorship</b><span>Guidance that
+                                    sticks</span></a>
+                        </div>
+
+                        <div class="mega-col">
+                            <div class="mega-title">Trust</div>
+                            <a class="mega-item" href="tracking.html"><b>Tracking</b><span>Where funds
+                                    go</span></a>
+                            <a class="mega-item" href="reports.html"><b>Reporting</b><span>Track your
+                                    impact</span></a>
+                            <a class="mega-item" href="faq.html"><b>FAQs</b><span>Receipts,
+                                    transparency</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-cta">
+            <a class="btn btn--donate" href="donate.html">Donate</a>
+            <a class="btn btn--ghost" href="contact.html">Contact</a>
+            <button class="icon-btn hamburger" data-drawer-open aria-label="Open menu">☰</button>
+        </div>                  
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="drawer" data-drawer>
+        <div class="drawer-panel" role="dialog" aria-label="Mobile menu">
+            <div class="drawer-top">
+                <a class="brand" href="index.html">
+                    <img src="assets/img/logo.svg" alt="Knowledge Home logo" />
+                    <span>Knowledge Home</span>
+                </a>
+                <button class="icon-btn" data-drawer-close aria-label="Close menu">✕</button>
+            </div>
+
+            <div class="drawer-links">
+                <a data-nav href="index.html">Home</a>
+                <a data-nav href="about.html">About</a>
+                <a data-nav href="programs.html">Programs</a>
+                <a data-nav href="get-involved.html">Get Involved</a>
+                <a data-nav href="donate.html">Donate</a>
+                <a data-nav href="contact.html">Contact</a>
+            </div>
+
+            <div class="drawer-actions">
+                <a class="btn" href="contact.html">Partner</a>
+                <a class="btn btn--primary" href="donate.html">Donate</a>
+            </div>
+        </div>
+    </div>
+</header>

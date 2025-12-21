@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.svg">
+    <title>Donate India • Knowledge Home</title>
+    <meta name="description" content="Donate in India via UPI/QR with clear tracking and updates." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div data-include="partials/header.html"></div>
+
+    <main>
+        <!-- HERO -->
+        <section class="section section--top">
+            <div class="container">
+                <div class="kicker reveal">Donate (India) • UPI • QR • Razorpay</div>
+
+                <h1 class="h1 reveal"><span class="accent-word">Support learning</span> in minutes.</h1>
+
+                <p class="subhead reveal">
+                    Knowledge Home helps learners access learning kits, mentorship, and digital learning, prioritizing
+                    girls and
+                    underserved communities. Use UPI QR or Razorpay below. Add a short purpose note so we allocate
+                    correctly.
+                </p>
+
+                <div class="hero-actions reveal">
+                    <a class="btn btn--primary" href="#qr">Scan UPI QR</a>
+                    <a class="btn" href="#razorpay">Pay via Razorpay</a>
+                    <a class="btn" href="tracking.html">Tracking</a>
+                    <a class="btn" href="donate.html">Back</a>
+                </div>
+
+                <div class="grid3 section--tight reveal" style="margin-top:16px; gap:12px;">
+                    <div class="card">
+                        <span class="tag">Purpose-led</span>
+                        <h3 style="margin-top:8px;">Education first</h3>
+                        <p class="soft">Support kits, mentorship, and digital access.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Simple</span>
+                        <h3 style="margin-top:8px;">Fast & easy</h3>
+                        <p class="soft">UPI QR / Razorpay: no complicated steps.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Transparent</span>
+                        <h3 style="margin-top:8px;">Clear updates</h3>
+                        <p class="soft">Allocation summaries + Tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-divider"></div>
+
+        <!-- DONATION METHODS (TOP) -->
+        <section class="section" id="qr">
+            <div class="container split">
+                <!-- UPI QR -->
+                <div class="panel reveal donate-panel">
+                    <span class="tag">UPI QR</span>
+                    <h2 style="margin:12px 0 8px;">Scan & donate</h2>
+                    <p class="subhead" style="max-width:none;">
+                        Open any UPI app → scan the QR → pay. After payment, submit a short note so we can allocate
+                        correctly.
+                    </p>
+
+                    <div class="qr-box qr-box--big" style="margin-top:12px;">
+                        <img src="assets/img/qr.png" alt="UPI QR code">
+                    </div>
+
+                    <div class="divider" style="margin:14px 0;"></div>
+
+                    <div class="soft" style="line-height:1.6;">
+                        <b style="color:rgba(245,246,247,.92)">Tip:</b> If you’re donating for a specific purpose,
+                        mention it in the note form
+                        (kits / mentorship / digital access / general fund).
+                    </div>
+                </div>
+
+                <!-- Razorpay + Note -->
+                <div class="panel reveal donate-panel" id="razorpay">
+                    <span class="tag">Razorpay</span>
+                    <h2 style="margin:12px 0 8px;">UPI + cards (India)</h2>
+                    <p class="subhead" style="max-width:none;">
+                        Razorpay checkout can be connected here. For now, use the button to reach us and we’ll help you
+                        complete it.
+                    </p>
+
+                    <div class="hero-actions" style="margin-top:12px;">
+                        <a class="btn btn--primary" href="contact.html">Pay with Razorpay</a>
+                        <a class="btn" href="reports.html">Reports</a>
+                        <a class="btn" href="faq.html">FAQs</a>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <span class="tag">Donation note</span>
+                    <p class="soft" style="margin:10px 0 12px;">
+                        Share the amount + purpose + date so we can match your donation in our tracking updates.
+                    </p>
+
+                    <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="India Donation Note — Knowledge Home" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
+
+                        <input class="input" name="Name" placeholder="Full name" required />
+                        <input class="input" type="email" name="Email" placeholder="Email" required />
+
+                        <select class="input" name="Purpose" required>
+                            <option value="" selected disabled>Select purpose</option>
+                            <option>Learning kits</option>
+                            <option>Mentorship</option>
+                            <option>Digital access / devices</option>
+                            <option>Community learning sessions</option>
+                            <option>General fund</option>
+                        </select>
+
+                        <textarea class="input" name="Message" rows="5"
+                            placeholder="Amount (₹) + date + purpose + any note…"></textarea>
+
+                        <button class="btn btn--primary" type="submit">Send note</button>
+                    </form>
+
+                    <div class="divider" style="margin:14px 0;"></div>
+
+                    <div class="soft" style="font-size:13px; line-height:1.6;">
+                        We keep updates clear. We avoid sharing sensitive personal details and prioritize learner
+                        dignity.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALLOCATION (BOTTOM) -->
+        <section class="section">
+            <div class="container">
+                <div class="panel reveal">
+                    <span class="tag">Transparency</span>
+                    <h2 style="margin:12px 0 8px;">Allocation preview</h2>
+                    <p class="subhead" style="max-width:none;">
+                        This is a preview of how support is typically allocated. Later, this can connect to real
+                        payments and update automatically.
+                    </p>
+
+                    <div class="split section--tight">
+                        <div class="panel reveal">
+                            <h3 style="margin:0 0 10px;">Allocation donut (preview)</h3>
+                            <div class="qr-box">
+                                <canvas id="donutChart" style="width:100%; height:260px;"></canvas>
+                            </div>
+
+                            <div class="grid3" style="margin-top:12px; gap:12px;">
+                                <div class="card">
+                                    <span class="tag">Core</span>
+                                    <h3 style="margin-top:8px;">60%</h3>
+                                    <p class="soft" style="margin:0;">Kits & essentials</p>
+                                </div>
+                                <div class="card">
+                                    <span class="tag">Guidance</span>
+                                    <h3 style="margin-top:8px;">25%</h3>
+                                    <p class="soft" style="margin:0;">Mentorship</p>
+                                </div>
+                                <div class="card">
+                                    <span class="tag">Delivery</span>
+                                    <h3 style="margin-top:8px;">15%</h3>
+                                    <p class="soft" style="margin:0;">Ops & logistics</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel reveal">
+                            <span class="tag">Explore</span>
+                            <h3 style="margin:10px 0 8px;">See tracking and reports</h3>
+                            <p class="soft" style="margin:0;">
+                                Want to see updates and summaries? We keep it readable and consistent.
+                            </p>
+
+                            <div class="hero-actions" style="margin-top:12px;">
+                                <a class="btn btn--primary" href="tracking.html">Open tracking</a>
+                                <a class="btn" href="reports.html">View reports</a>
+                                <a class="btn" href="contact.html">Contact</a>
+                            </div>
+
+                            <div class="divider" style="margin:14px 0;"></div>
+
+                            <div class="soft" style="line-height:1.6;">
+                                For bulk donations, CSR sponsorship, or monthly auto-donation setup,
+                                please reach out, we’ll share a simple plan and reporting format.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

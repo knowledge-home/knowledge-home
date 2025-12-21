@@ -1,0 +1,68 @@
+<!-- partials/footer.html -->
+<footer class="footer" aria-label="Site footer">
+    <div class="container">
+        <!-- Top multi-column area -->
+        <div class="footer-cols">
+            <!-- First column -->
+            <div class="footer-col">
+                <a class="btn" href="index.html">
+                    <span>KNOWLEDGE HOME</span>
+                </a>
+            
+                <p class="footer-blurb">
+                    A support foundation helping learners with kits, mentorship, and digital access: delivered through
+                    partner communities with clear tracking and updates.
+                </p>
+            </div>
+
+
+            <div class="footer-col">
+                <div class="footer-col-title">Programs</div>
+                <a href="programs.html#kits">Learning kits</a>
+                <a href="programs.html#mentor">Mentorship</a>
+                <a href="donate.html#tracking">Tracking</a>
+                <a href="donate.html#faq">FAQs</a>
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-col-title">Get involved</div>
+                <a href="get-involved.html">Overview</a>
+                <a href="get-involved.html#roles">Volunteer roles</a>
+                <a href="get-involved.html#form">Volunteer form</a>
+                <a href="contact.html">Partnerships</a>
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-col-title">Company</div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html">Donate</a>
+                <a href="programs.html">Programs</a>
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-col-title">Connect</div>
+                <a href="mailto:knowledgehomeorg@gmail.com">knowledgehomeorg@gmail.com</a>
+                <a href="#" aria-disabled="true">Instagram</a>
+                <a href="#" aria-disabled="true">LinkedIn</a>
+                <a href="#" aria-disabled="true">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <small>
+                © <span id="year"></span> Knowledge Home · Kits · Mentorship · Digital access
+            </small>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+    </div>
+
+    <script>
+        // safe if footer included multiple times (won't break)
+        (function () {
+            var el = document.getElementById("year");
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+    </script>
+</footer>

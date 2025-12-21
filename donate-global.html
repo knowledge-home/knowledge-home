@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.svg">
+    <title>Donate Global • Knowledge Home</title>
+    <meta name="description" content="Global donations via Card/PayPal/Zelle with clear tracking and updates." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div data-include="partials/header.html"></div>
+
+    <main>
+        <!-- HERO -->
+        <section class="section section--top">
+            <div class="container">
+                <div class="kicker reveal">Donate (Global) • card • PayPal • Zelle</div>
+                <h1 class="h1 reveal"><span class="accent-word">Support learning</span> from anywhere.</h1>
+                <p class="subhead reveal">
+                    Knowledge Home helps learners access learning kits, mentorship, and digital learning, prioritizing
+                    girls and
+                    underserved communities. Choose a method below, then leave a short note so we can allocate
+                    correctly.
+                </p>
+
+                <div class="hero-actions reveal">
+                    <a class="btn btn--primary" href="#zelle">Zelle QR</a>
+                    <a class="btn" href="#methods">Card / PayPal</a>
+                    <a class="btn" href="#note">Donation note</a>
+                    <a class="btn" href="donate.html">Back</a>
+                </div>
+
+                <div class="grid3 section--tight reveal" style="margin-top:16px; gap:12px;">
+                    <div class="card">
+                        <span class="tag">Access</span>
+                        <h3 style="margin-top:8px;">Remove barriers</h3>
+                        <p class="soft">Kits, essentials, and learning tools.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Consistency</span>
+                        <h3 style="margin-top:8px;">Mentorship</h3>
+                        <p class="soft">Guidance that builds routines and confidence.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Transparency</span>
+                        <h3 style="margin-top:8px;">Clear updates</h3>
+                        <p class="soft">Allocation summaries + progress notes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="glow-divider"></div>
+
+        <!-- DONATION METHODS (TOP) -->
+        <section class="section" id="zelle">
+            <div class="container split">
+
+                <!-- Zelle QR -->
+                <div class="panel reveal donate-panel">
+                    <span class="tag">Zelle</span>
+                    <h2 style="margin:12px 0 8px;">Zelle QR (US)</h2>
+                    <p class="subhead" style="max-width:none;">
+                        Open your banking app → Zelle → scan QR → send. After payment, submit a short note so we can
+                        allocate correctly.
+                    </p>
+
+                    <div class="qr-box qr-box--big" style="margin-top:12px;">
+                        <img src="assets/img/qr.png" alt="Zelle QR code">
+                    </div>
+
+                    <div class="divider" style="margin:14px 0;"></div>
+
+                    <div class="soft" style="line-height:1.6;">
+                        <b style="color:rgba(245,246,247,.92)">Tip:</b> If your app asks for a memo, add a short purpose
+                        (kits / mentorship / digital access).
+                    </div>
+                </div>
+
+                <!-- Card/PayPal/Transfer -->
+                <div class="panel reveal donate-panel" id="methods">
+                    <span class="tag">Card / PayPal</span>
+
+                    <div class="payhead">
+                        <div>
+                            <h2 class="paytitle">Pay with card or PayPal</h2>
+                            <p class="subhead" style="max-width:none; margin:0;">
+                                These buttons are UI-ready today and can be connected to live checkout later.
+                                For bank transfer or sponsorship, request details.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="paygrid">
+                        <!-- Stripe -->
+                        <article class="paycard paycard--stripe">
+                            <div class="paycard__top">
+                                <div class="paykicker">CARD</div>
+                                <div class="paybrand">Stripe</div>
+                                <div class="paydesc">
+                                    Visa, Mastercard, and AmEx for secure global card payments.
+                                </div>
+                            </div>
+                        
+                            <div class="paycard__cta">
+                                <a class="btn btn--primary paybtn" href="contact.html">Pay with card</a>
+                            </div>
+                        
+                            <div class="payfine">
+                                Works for one-time or recurring donations, supports worldwide.
+                            </div>
+                        </article>                          
+
+                        <!-- PayPal -->
+                        <article class="paycard paycard--paypal">
+                            <div class="paycard__top">
+                                <div class="paykicker">PAYPAL</div>
+                                <div class="paybrand">Intl.</div>
+                                <div class="paydesc">
+                                    Fast and familiar option for international supporters worldwide.
+                                </div>
+                            </div>
+                        
+                            <div class="paycard__cta">
+                                <a class="btn btn--primary paybtn" href="contact.html">Pay with PayPal</a>
+                            </div>
+                        
+                            <div class="payfine">
+                                Ideal for quick global transfers without sharing card details.
+                            </div>
+                        </article>                          
+
+                        <!-- Transfer -->
+                        <article class="paycard paycard--transfer">
+                            <div class="paycard__top">
+                                <div class="paykicker">TRANSFER</div>
+                                <div class="paybrand">Bank</div>
+                                <div class="paydesc">
+                                    Designed for organizations, sponsors, and higher-value contributions.
+                                </div>
+                            </div>
+                        
+                            <div class="paycard__cta">
+                                <a class="btn btn--primary paybtn" href="contact.html">Request details</a>
+                            </div>
+                        
+                            <div class="payfine">
+                                Best for bulk donations, campaigns, or partnerships.
+                            </div>
+                        </article>                          
+                    </div>
+
+                    <div class="divider" style="margin:16px 0;"></div>
+
+                    <div class="soft" style="line-height:1.6;">
+                        For recurring donations, bulk sponsorship, or campaign partnerships, contact us and we’ll share a
+                        simple plan and reporting format.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="glow-divider"></div>
+
+        <!-- DONATION NOTE -->
+        <section class="section" id="note">
+            <div class="container split">
+                <div class="panel reveal donate-panel">
+                    <span class="tag">Donation note</span>
+                    <h2 style="margin:12px 0 8px;">Help us match your donation</h2>
+                    <p class="subhead" style="max-width:none;">
+                        Share amount + purpose (kits / mentorship / digital access / general fund). This helps us track
+                        and report your support clearly.
+                    </p>
+
+                    <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Global Donation Note — Knowledge Home" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="false" />
+
+                        <input class="input" name="Name" placeholder="Full name" required />
+                        <input class="input" type="email" name="Email" placeholder="Email" required />
+
+                        <select class="input" name="Purpose" required>
+                            <option value="" selected disabled>Select purpose</option>
+                            <option>Learning kits</option>
+                            <option>Mentorship</option>
+                            <option>Digital access / devices</option>
+                            <option>Community learning sessions</option>
+                            <option>General fund</option>
+                        </select>
+
+                        <textarea class="input" name="Message" rows="5"
+                            placeholder="Amount + date + method (Zelle/PayPal/Card) + any note…"></textarea>
+
+                        <button class="btn btn--primary" type="submit">Send note</button>
+                    </form>
+
+                    <div class="divider" style="margin:14px 0;"></div>
+                    <div class="soft" style="font-size:13px; line-height:1.6;">
+                        We keep updates human-friendly and protect privacy. We avoid personal identifiers and share
+                        proof where possible.
+                    </div>
+                </div>
+
+                <div class="panel reveal donate-panel">
+                    <span class="tag">What happens next</span>
+                
+                    <h2 style="margin:12px 0 8px;">After you donate</h2>
+                
+                    <p class="subhead" style="max-width:none;">
+                        We keep the process simple and human: no noise, no confusion.
+                    </p>
+                
+                    <ul class="list" style="margin-top:10px;">
+                        <li>We confirm your support by email</li>
+                        <li>Your note helps us allocate correctly</li>
+                        <li>Updates appear in the tracking feed</li>
+                        <li>Reports are shared periodically</li>
+                    </ul>
+                
+                    <div class="divider"></div>
+                
+                    <div class="soft" style="line-height:1.6;">
+                        For recurring donations, bulk sponsorships, or program partnerships,
+                        reach out; we’ll respond with a clear plan and reporting format.
+                    </div>
+                
+                    <div class="hero-actions" style="margin-top:14px;">
+                        <a class="btn btn--primary" href="contact.html">Contact us</a>
+                        <a class="btn" href="faq.html">Read FAQs</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ALLOCATION (BOTTOM) -->
+        <section class="section">
+            <div class="container">
+                <div class="panel reveal">
+                    <span class="tag">Transparency</span>
+                    <h2 style="margin:12px 0 8px;">Allocation preview</h2>
+                    <p class="subhead" style="max-width:none;">
+                        This is a preview of how support is typically allocated. Later, it can connect to real payments
+                        and update automatically.
+                    </p>
+
+                    <div class="split section--tight">
+                        <div class="panel reveal">
+                            <h3 style="margin:0 0 10px;">Allocation donut (preview)</h3>
+                            <div class="qr-box">
+                                <canvas id="donutChart" style="width:100%; height:260px;"></canvas>
+                            </div>
+
+                            <div class="grid3" style="margin-top:12px; gap:12px;">
+                                <div class="card">
+                                    <span class="tag">Core</span>
+                                    <h3 style="margin-top:8px;">60%</h3>
+                                    <p class="soft" style="margin:0;">Kits & essentials</p>
+                                </div>
+                                <div class="card">
+                                    <span class="tag">Guidance</span>
+                                    <h3 style="margin-top:8px;">25%</h3>
+                                    <p class="soft" style="margin:0;">Mentorship</p>
+                                </div>
+                                <div class="card">
+                                    <span class="tag">Delivery</span>
+                                    <h3 style="margin-top:8px;">15%</h3>
+                                    <p class="soft" style="margin:0;">Ops & logistics</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel reveal">
+                            <span class="tag">What’s next</span>
+                            <h3 style="margin:10px 0 8px;">From preview → real-time tracking</h3>
+                            <p class="soft" style="margin:0;">
+                                Connect payments → database → dashboards, so allocations and updates refresh
+                                automatically (daily/weekly).
+                            </p>
+
+                            <div class="divider" style="margin:14px 0;"></div>
+
+                            <div class="hero-actions">
+                                <a class="btn btn--primary" href="tracking.html">Open tracking</a>
+                                <a class="btn" href="reports.html">Reports</a>
+                                <a class="btn" href="contact.html">Contact</a>
+                            </div>
+
+                            <div class="divider" style="margin:14px 0;"></div>
+
+                            <div class="soft" style="line-height:1.6;">
+                                For bulk donations, sponsorships, or bank transfers: reach out. We’ll respond with a
+                                clear plan and reporting format.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>

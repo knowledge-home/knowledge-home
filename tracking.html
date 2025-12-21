@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.svg">
+    <title>Tracking • Knowledge Home</title>
+    <meta name="description" content="Tracking dashboard: where funds go, allocations, and updates." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <div class="grain" aria-hidden="true"></div>
+    <div data-include="partials/header.html"></div>
+
+    <main>
+        <!-- HERO -->
+        <section class="section section--top">
+            <div class="container">
+                <div class="kicker reveal">Tracking • allocation • transparency</div>
+                <h1 class="h1 reveal"><span class="accent-word">Transparent support.</span> Real educational impact.</h1>
+                <p class="subhead reveal">
+                    Knowledge Home exists to keep education support consistent: learning kits, mentorship, and digital
+                    access,
+                    prioritizing girls and underserved communities. This page shows how support is allocated and what
+                    changes on the ground.
+                </p>
+
+                <div class="hero-actions reveal">
+                    <a class="btn btn--primary" href="donate.html">Support a program</a>
+                    <a class="btn" href="reports.html">Reports</a>
+                    <a class="btn" href="faq.html">FAQs</a>
+                </div>
+
+                <div class="grid3 section--tight reveal" style="margin-top:16px; gap:12px;">
+                    <div class="card">
+                        <span class="tag">Clarity</span>
+                        <h3 style="margin-top:8px;">Simple breakdown</h3>
+                        <p class="soft">Allocations and updates without complicated language.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Accountability</span>
+                        <h3 style="margin-top:8px;">Trackable actions</h3>
+                        <p class="soft">What was delivered, where it went, and what’s next.</p>
+                    </div>
+                    <div class="card">
+                        <span class="tag">Upgradable</span>
+                        <h3 style="margin-top:8px;">Real-time ready</h3>
+                        <p class="soft">Designed to connect to payments + database later.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="glow-divider"></div>
+
+        <!-- ALLOCATION + CHARTS -->
+        <section class="section">
+            <div class="container">
+                <div class="panel reveal">
+                    <span class="tag">Allocation</span>
+                    <h2 style="margin:12px 0 8px;">How your support is used</h2>
+                    <p class="subhead" style="max-width:none;">
+                        These visuals are a front-end preview today. Once payments are connected, allocations and trends
+                        can update automatically.
+                    </p>
+                </div>
+
+                <div class="split section--tight">
+                    <!-- Donut -->
+                    <div class="panel reveal">
+                        <div
+                            style="display:flex; align-items:flex-end; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+                            <div>
+                                <span class="tag">Snapshot</span>
+                                <h3 style="margin:10px 0 6px;">Allocation donut</h3>
+                                <p class="soft" style="margin:0;">A simple view of where support goes.</p>
+                            </div>
+                            <a class="btn" href="donate.html">Sponsor a category</a>
+                        </div>
+
+                        <div class="divider" style="margin:14px 0;"></div>
+
+                        <div class="qr-box">
+                            <canvas id="donutChart" style="width:100%; height:260px;"></canvas>
+                        </div>
+
+                        <div class="grid3" style="margin-top:12px; gap:12px;">
+                            <div class="card">
+                                <span class="tag">Core</span>
+                                <h3 style="margin-top:8px;">60%</h3>
+                                <p class="soft" style="margin:0;">Learning kits & supplies</p>
+                            </div>
+                            <div class="card">
+                                <span class="tag">Growth</span>
+                                <h3 style="margin-top:8px;">25%</h3>
+                                <p class="soft" style="margin:0;">Mentorship & guidance</p>
+                            </div>
+                            <div class="card">
+                                <span class="tag">Delivery</span>
+                                <h3 style="margin-top:8px;">15%</h3>
+                                <p class="soft" style="margin:0;">Ops & logistics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monthly -->
+                    <div class="panel reveal">
+                        <span class="tag">Trend</span>
+                        <h3 style="margin:10px 0 6px;">Monthly activity (preview)</h3>
+                        <p class="soft" style="margin:0 0 12px;">
+                            A sample view of month-over-month activity once systems are connected.
+                        </p>
+
+                        <div class="qr-box">
+                            <canvas id="chartBar" style="width:100%; height:260px;"></canvas>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <span class="tag">Next upgrade</span>
+                        <p class="soft" style="margin-top:8px;">
+                            Payment provider → database → dashboard updates (daily/weekly), with clear summaries and
+                            receipts where possible.
+                        </p>
+
+                        <div class="hero-actions" style="margin-top:12px;">
+                            <a class="btn" href="reports.html">See reports format</a>
+                            <a class="btn btn--primary" href="donate.html">Support now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPDATES FEED -->
+                <div class="panel reveal" style="margin-top:18px;">
+                    <span class="tag">Updates</span>
+
+                    <div class="updates-head">
+                        <div>
+                            <h2 style="margin:12px 0 6px;">Updates feed</h2>
+                            <p class="subhead" style="max-width:none; margin:0;">
+                                Clear, human-friendly notes on what was delivered, where it went, and what’s next.
+                            </p>
+                        </div>
+
+                        <div class="updates-actions">
+                            <a class="btn" href="reports.html">Reports</a>
+                            <a class="btn btn--primary" href="donate.html">Support a program</a>
+                        </div>
+                    </div>
+
+                    <div class="divider" style="margin:14px 0;"></div>
+
+                    <div class="updates-feed">
+                        <article class="u-item">
+                            <div class="u-meta">
+                                <div class="u-date">Jan 2025</div>
+                                <div class="u-badges">
+                                    <span class="badge badge--done">Completed</span>
+                                    <span class="pill">Kits</span>
+                                </div>
+                            </div>
+                            <h3 class="u-title">Learning kits delivered via local partner network</h3>
+                            <p class="u-desc">
+                                Essentials reached learners in an access-limited community. Next: follow-up on
+                                attendance and usage.
+                            </p>
+                        </article>
+
+                        <article class="u-item">
+                            <div class="u-meta">
+                                <div class="u-date">Feb 2025</div>
+                                <div class="u-badges">
+                                    <span class="badge badge--live">Ongoing</span>
+                                    <span class="pill">Mentorship</span>
+                                </div>
+                            </div>
+                            <h3 class="u-title">Mentorship cohort started (weekly sessions)</h3>
+                            <p class="u-desc">
+                                Sessions focus on study planning, confidence building, and consistent learning routines.
+                            </p>
+                        </article>
+
+                        <article class="u-item">
+                            <div class="u-meta">
+                                <div class="u-date">Mar 2025</div>
+                                <div class="u-badges">
+                                    <span class="badge badge--plan">Planned</span>
+                                    <span class="pill">Digital access</span>
+                                </div>
+                            </div>
+                            <h3 class="u-title">Digital access support plan prepared</h3>
+                            <p class="u-desc">
+                                Device + connectivity support pipeline drafted with partners. Next: confirm candidates
+                                and logistics.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="panel u-next" style="margin-top:14px;">
+                        <span class="tag">What’s next</span>
+                        <h3 style="margin:10px 0 6px;">From preview → real-time tracking</h3>
+                        <p class="soft" style="margin:0;">
+                            When we connect systems, this feed can show program deliveries, allocations, and proof, kept
+                            simple and easy to understand.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="assets/js/includes.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+
+</html>
