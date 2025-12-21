@@ -1346,7 +1346,7 @@ p {
     padding: 10px 8px;
 
     text-align: center;
-    font-size: 11px;
+    font-size: 9px;
     line-height: 1.15;
 
     white-space: normal;
@@ -1676,6 +1676,13 @@ select.input option {
 /* Center ONLY the QR download button */
 .qr-download {
   justify-content: center;
+}
+
+/* Center ONLY the QR download button on mobile & tablet */
+@media (max-width: 1024px) {
+  .qr-download {
+    justify-content: center;
+  }
 }
 
 /* BRAND */
