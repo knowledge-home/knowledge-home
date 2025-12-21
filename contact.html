@@ -99,15 +99,15 @@
           <p class="section-subtitle" style="margin:0 0 12px;">
             Share your region and your goal. We’ll respond with a clear plan.
           </p>
-
-          <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
+          <form id="contactForm" class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="Website Contact — Knowledge Home" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-
+          
             <input class="input" name="Name" placeholder="Full name" required />
             <input class="input" name="City" placeholder="Country / City (e.g., New York, USA)" required />
             <input class="input" type="email" name="Email" placeholder="Email" required />
+          
             <div class="phone-group">
               <select class="input phone-code" name="CountryCode" required>
                 <option value="+1">+1 (US)</option>
@@ -119,10 +119,10 @@
                 <option value="+971">+971 (UAE)</option>
                 <option value="+49">+49 (Germany)</option>
               </select>
-            
+          
               <input class="input phone-number" type="tel" name="Phone" placeholder="Phone number" required />
-            </div>            
-
+            </div>
+          
             <select class="input" name="Topic" required>
               <option value="" selected disabled>Select a topic</option>
               <option>NGO Partnership (On-ground delivery)</option>
@@ -135,12 +135,14 @@
               <option>Media / Press / Story Partnership</option>
               <option>Other</option>
             </select>
-            
-
+          
             <textarea class="input" name="Message" rows="7"
               placeholder="Availability (days/timezone), skills, and what you’d like to help with..."></textarea>
-
+          
             <button class="btn btn--primary" type="submit">Send</button>
+          
+            <!-- Flash message (AJAX success / error) -->
+            <div id="formFlash" class="form-flash" aria-live="polite"></div>
           </form>
 
           <div class="divider" style="margin:14px 0;"></div>

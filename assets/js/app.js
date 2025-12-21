@@ -7,6 +7,7 @@
    - Reveal on scroll
    - Force page load at top on navigation
    - Dynamic aurora mouse drift
+   - Back to top (#top) smooth scroll fix (works on all pages)
 ========================================================= */
 
 (function () {
@@ -171,6 +172,19 @@
     window.addEventListener("pointermove", onMove, { passive: true });
   }
 
+  /* =========================
+     Back to top (#top) fix
+     - Works on all pages
+     - Does not interfere with forceTop nav logic
+  ========================= */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href="#top"]');
+    if (!a) return;
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.replaceState(null, "", "#top");
+  });
+
   function initAll() {
     setActiveNav();
     initMegaMenus();
@@ -184,4 +198,60 @@
 
   // Fallback (if someone forgets includes.js)
   if (!document.querySelector("[data-include]")) initAll();
+
+  /* =========================================================
+     FormSubmit AJAX + flash message (supports multiple forms)
+     - contact form:   #contactForm  -> #formFlash
+     - volunteer form: #volunteerForm -> #volunteerFlash
+  ========================================================= */
+  (function bindForms() {
+    const attachOne = (formId, flashId) => {
+      const form = document.getElementById(formId);
+      if (!form) return;
+
+      // Prevent double-binding if includes:loaded fires multiple times
+      if (form.dataset.bound === "1") return;
+      form.dataset.bound = "1";
+
+      const flash = document.getElementById(flashId);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        if (flash) {
+          flash.textContent = "Submitting…";
+          flash.className = "form-flash show";
+        }
+
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+          });
+
+          if (res.ok) {
+            form.reset();
+            if (flash) flash.textContent = "✅ Submitted successfully.";
+          } else {
+            if (flash) flash.textContent = "⚠️ Something went wrong. Please try again.";
+          }
+        } catch (err) {
+          if (flash) flash.textContent = "⚠️ Network error. Please try again later.";
+        }
+
+        if (flash) setTimeout(() => flash.classList.remove("show"), 4500);
+      });
+    };
+
+    const attachAll = () => {
+      attachOne("contactForm", "formFlash");
+      attachOne("volunteerForm", "volunteerFlash");
+    };
+
+    // try now
+    attachAll();
+    // try again after includes load (partials injected)
+    document.addEventListener("includes:loaded", attachAll);
+  })();
 })();
