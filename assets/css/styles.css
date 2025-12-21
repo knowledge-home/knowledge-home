@@ -719,7 +719,7 @@ p {
 
 /* Value line (main content) */
 .snapshot--v2 .snap-points .v {
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(247, 248, 251, .88);
   line-height: 1.25;
 
@@ -1328,10 +1328,10 @@ p {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     /* ✅ 4 per row */
-    gap: 5px;
+    gap: 3px;
 
     /* Inner breathing room */
-    padding: 8px;
+    padding: 5px;
     box-sizing: border-box;
 
     /* Prevent any side overflow */
@@ -1346,7 +1346,7 @@ p {
     padding: 10px 8px;
 
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.15;
 
     white-space: normal;
@@ -1673,6 +1673,11 @@ select.input option {
   padding-right: 0 !important;
 }
 
+/* Center ONLY the QR download button */
+.qr-download {
+  justify-content: center;
+}
+
 /* BRAND */
 .brand {
   display: flex;
@@ -1702,7 +1707,7 @@ select.input option {
 
 .brand-name {
   font-size: clamp(16px, 1.6vw, 20px);
-  font-weight: 800;
+  font-weight: 1000;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, .96);
   white-space: nowrap;
