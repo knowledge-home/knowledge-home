@@ -603,6 +603,7 @@ p {
   box-shadow: 0 30px 90px rgba(0, 0, 0, .65), inset 0 1px 0 rgba(255, 255, 255, .06);
 
   min-width: 0;
+  min-height: 590px;
 }
 
 .snapshot--v2 .snapshot__top {
@@ -642,8 +643,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 4px;
   min-width: 0;
 }
 
@@ -655,8 +656,8 @@ p {
 }
 
 .snapshot--v2 .snap-title {
-  margin: 0 0 12px;
-  font-size: 16px;
+  margin: 0 0 8px;
+  font-size: 14px;
   line-height: 1.18;
 }
 
@@ -680,7 +681,7 @@ p {
   position: relative;
   display: grid;
   grid-template-rows: auto auto;
-  gap: 6px;
+  gap: 8px;
 
   padding: 10px 12px 12px;
   border-radius: 16px;
@@ -1161,6 +1162,13 @@ p {
   .grid3 {
     grid-template-columns: 1fr;
   }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  padding-bottom: 20px;
 }
 
 .card,
@@ -1685,52 +1693,192 @@ select.input option {
   }
 }
 
-/* BRAND */
-.brand {
+
+/* Donate hero: left content + right QR only */
+.hero-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, .75fr) !important;
+  gap: 26px !important;
+  align-items: start !important;
+}
+
+.hero-main {
+  min-width: 0;
+}
+
+/* QR stays compact on the right */
+.upi-qr {
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .14);
+  box-shadow: var(--shadow2);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.upi-qr img {
+  width: 210px;
+  height: auto;
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px;
+}
+
+.footer-bottom small a {
+  color: rgba(245, 246, 247, .7);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(245, 246, 247, .25);
+}
+
+.footer-bottom small a:hover {
+  color: rgba(245, 246, 247, .95);
+  border-bottom-color: rgba(245, 246, 247, .6);
+}
+
+/* managed by highlight */
+.footer-credit .managed-by{
+  color: rgba(160, 200, 255, .85); /* soft blue highlight */
+  font-weight: 500;
+}
+
+/* link style */
+.footer-credit .managed-by a{
+  color: rgba(180, 210, 255, .95);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(180, 210, 255, .35);
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.footer-credit .managed-by a:hover{
+  color: #ffffff;
+  border-bottom-color: rgba(255,255,255,.7);
+}
+
+/* Mobile/tablet: stack, QR goes under main content */
+@media (max-width: 980px) {
+  .hero-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .upi-qr {
+    max-width: 520px;
+    margin: 14px auto 0;
+  }
+}
+
+/* BRAND */
+/* =========================
+   NAV BRAND (logo + text) — premium polish
+   Works with your existing markup:
+   <a class="brand"><img/><div class="brand-text">...</div></a>
+========================= */
+
+.navbar {
+  align-items: center;
+}
+
+/* clickable brand row */
+.brand {
+  display: inline-flex;
   align-items: center;
   gap: 14px;
   text-decoration: none;
-  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 18px;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease;
+  border: 1px solid rgba(255, 255, 255, .07);
+  background: rgba(0, 0, 0, .14);
+  backdrop-filter: blur(12px) saturate(1.05);
+  -webkit-backdrop-filter: blur(12px) saturate(1.05);
 }
 
+/* premium hover */
+.brand:hover {
+  background: rgba(255, 255, 255, .04);
+  border-color: rgba(255, 255, 255, .12);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, .45);
+  transform: translateY(-1px);
+}
+
+.brand:active {
+  transform: translateY(0);
+}
+
+/* logo container look (fixes the "flat" feel) */
 .brand img {
   width: 64px;
-  /* ⬅️ increase from typical 36–40 */
   height: 64px;
   object-fit: contain;
-  flex-shrink: 0;
-
-  /* subtle clarity boost */
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .35));
+  padding: 0px;
 }
 
+/* stack text nicely */
 .brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.12;
-  min-width: 0;
+  line-height: 1.05;
+  gap: 4px;
 }
 
+/* main name: bolder, tighter, nicer tracking */
 .brand-name {
-  font-size: clamp(16px, 1.6vw, 20px);
-  font-weight: 1000;
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, .96);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: rgba(245, 246, 247, .96);
 }
 
+/* tagline: smaller, softer, but still readable */
 .brand-tagline {
-  margin: 4px 0 0;
-  font-size: 11px;
+  margin: 0;
+  font-size: 12.5px;
   font-weight: 600;
-  letter-spacing: .02em;
-  color: rgba(255, 255, 255, .68);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 247, .60);
+}
+
+/* make sure it doesn't wrap weirdly */
+.brand-name,
+.brand-tagline {
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+/* Slightly smaller on smaller laptops/tablets */
+@media (max-width: 980px) {
+  .brand {
+    padding: 8px 10px;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 46px;
+    height: 46px;
+    padding: 7px;
+    border-radius: 14px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+  .brand-tagline {
+    font-size: 11px;
+  }
+}
+
+/* On mobile: prioritize name, hide tagline if space is tight */
+@media (max-width: 560px) {
+  .brand-tagline {
+    display: none;
+  }
 }
 
 /* NAV LINKS (desktop/tablet) */
@@ -2373,7 +2521,7 @@ form.form .btn {
 }
 
 .back-to-top {
-  font-size: 13px;
+  font-size: 10px;
   color: rgba(255, 255, 255, .78);
   padding: 10px 14px;
   border-radius: 999px;

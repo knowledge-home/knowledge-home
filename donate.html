@@ -24,38 +24,58 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div data-include="partials/header.html"></div>
 
   <main>
     <!-- HERO -->
+    <!-- HERO -->
     <section class="section section--top">
       <div class="container hero-row">
-        <div>
+        <!-- LEFT: Text + buttons -->
+        <div class="hero-main">
           <div class="kicker reveal">Donate • education support • transparency</div>
           <h1 class="h1 reveal">Turn <span class="accent-word">your support</span> into consistent learning.</h1>
           <p class="subhead reveal">
             Knowledge Home helps learners access learning kits, mentorship, and digital learning; prioritizing girls and
             underserved communities. Choose your region to donate, and we’ll keep updates clear and human-friendly.
           </p>
-
+    
           <div class="hero-actions reveal">
             <a class="btn btn--primary" href="donate-india.html">Donate (India)</a>
             <a class="btn" href="donate-global.html">Donate (Global)</a>
             <a class="btn" href="tracking.html">Open tracking</a>
           </div>
-
+    
           <div class="soft reveal" style="margin-top:10px;">
             Prefer recurring support, bulk donations, or campaign sponsorship? <a href="contact.html">Contact us</a>.
           </div>
         </div>
-
-        <!-- Replace suggested amounts with "Why donate" -->
+    
+        <!-- RIGHT: ONLY UPI QR -->
+        <aside class="upi-qr reveal" aria-label="UPI QR for India donations">
+          <span class="pill">UPI • India</span>
+    
+          <img src="assets/img/qr.png" alt="UPI QR Code for Knowledge Home India donations" loading="lazy" />
+    
+          <div class="soft">
+            Scan to donate via UPI<br />
+            <small>(India only)</small>
+          </div>
+          <div class="hero-actions qr-download">
+            <a class="btn" href="assets/img/qr.png" download="KnowledgeHome-UPI-QR.png">
+              Download QR code
+            </a>
+          </div>
+        </aside>
+      </div>
+    
+      <!-- Why your support matters (kept in normal flow, NOT on right) -->
+      <div class="container" style="margin-top:16px;">
         <aside class="hero-card reveal">
           <span class="pill">Why your support matters</span>
-
+    
           <div class="grid3" style="margin-top:14px; gap:12px;">
             <div class="card">
               <span class="tag">Access</span>
@@ -73,9 +93,9 @@
               <p>Devices and connectivity where digital access is limited or unavailable.</p>
             </div>
           </div>
-
+    
           <div class="divider" style="margin:14px 0;"></div>
-
+    
           <div class="soft" style="line-height:1.6;">
             We don’t aim to be flashy. We aim to be consistent support that reaches learners, stays trackable,
             and shows progress over time.
@@ -83,6 +103,7 @@
         </aside>
       </div>
     </section>
+
 
     <div class="glow-divider"></div>
 
