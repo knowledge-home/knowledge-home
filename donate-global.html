@@ -81,50 +81,78 @@
                     <span class="tag">Global donations</span>
                     <div class="glow-divider"></div>
                     <h2 style="margin:12px 0 8px;">Donate securely via GoFundMe</h2>
-                    <p class="subhead" style="max-width:none;">
-                        GoFundMe supports global card payments and provides donation protection. After donating, please leave a
-                        short
-                        note so we can allocate your support correctly (kits / mentorship / digital access / general fund).
-                    </p>
         
                     <div class="hero-actions" style="margin-top:12px;">
                         <a class="btn btn--primary" href="https://gofund.me/c0747c0a6" target="_blank" rel="noopener">
                             Donate on GoFundMe
                         </a>
-                        <a class="btn" href="#note">Leave a note</a>
                     </div>
         
                     <div class="divider" style="margin:14px 0;"></div>
         
-                    <div class="soft" style="line-height:1.6;">
-                        <b style="color:rgba(245,246,247,.92)">Note:</b> Donations made on GoFundMe are not currently
-                        tax-deductible in
-                        the U.S. We share updates that are simple, human-friendly, and privacy-safe.
-                    </div>
+                    <div class="panel reveal donate-panel" id="note">
+                        <h2 style="margin:12px 0 8px;">Help us track your support</h2>
+                        <p class="subhead" style="max-width:none;">
+                            After donating via UPI, please share the amount, date, and purpose so we can include it
+                            accurately in our tracking updates.
+                        </p>
+                        <div class="glow-divider"></div>
+                        <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="India Donation Note — Knowledge Home" />
+                            <input type="hidden" name="_template" value="table" />
+                            <input type="hidden" name="_captcha" value="false" />
+                    
+                            <input class="input" name="Name" placeholder="Full name" required />
+                            <input class="input" type="email" name="Email" placeholder="Email" required />
+                    
+                            <select class="input" name="Purpose" required>
+                                <option value="" selected disabled>Select purpose</option>
+                                <option>Learning kits</option>
+                                <option>Mentorship</option>
+                                <option>Digital access / devices</option>
+                                <option>Community learning sessions</option>
+                                <option>General fund</option>
+                            </select>
+                    
+                            <textarea class="input" name="Message" rows="5"
+                                placeholder="Amount (₹) + date + purpose + any note…"></textarea>
+                    
+                            <button class="btn btn--primary" type="submit">Send note</button>
+                        </form>
+                    
+                        <div class="divider" style="margin:14px 0;"></div>
+                    
+                        <div class="soft" style="font-size:13px; line-height:1.6;">
+                            We respect privacy and share only aggregated, human-friendly updates.
+                        </div>
+                        </div>
                 </div>
         
                 <!-- Optional: Keep “contact for partnerships” -->
+                <!-- UPI QR -->
                 <div class="panel reveal donate-panel">
-                    <span class="tag">Partnerships</span>
-                    <div class="glow-divider"></div>
-                    <h2 style="margin:12px 0 8px;">Sponsors & bulk support</h2>
+                    <span class="tag">GoFundMe QR</span>
+                    <h2 style="margin:12px 0 8px;">Scan & donate</h2>
                     <p class="subhead" style="max-width:none;">
-                        If you represent a school, NGO, or company and want to sponsor kits, devices, or mentorship programs,
-                        contact
-                        us. We’ll share a clear plan and reporting format.
-                    </p>
-        
-                    <div class="hero-actions" style="margin-top:12px;">
-                        <a class="btn btn--primary" href="contact.html">Contact us</a>
-                        <a class="btn" href="reports.html">View reports</a>
+                        Scan the QR to open our GoFundMe page and complete your donation securely.
+                        After donating, please submit a short note so we can allocate your support correctly.
+                    </p>                      
+                
+                    <div class="qr-box qr-box--big" style="margin-top:12px;">
+                        <img src="assets/img/qr-global.png" alt="UPI QR code">
+                        <div class="hero-actions qr-download">
+                            <a class="btn" href="assets/img/qr-global.png" download="KnowledgeHome-UPI-QR.png">
+                                Download QR code
+                            </a>
+                        </div>
                     </div>
-        
+                
                     <div class="divider" style="margin:14px 0;"></div>
-        
+                
                     <div class="soft" style="line-height:1.6;">
-                        We do not accept personal Zelle/Venmo/PayPal links on the website. Global donations are processed
-                        through
-                        trusted platforms.
+                        <b style="color:rgba(245,246,247,.92)">Tip:</b> If you’re donating for a specific purpose,
+                        mention it in the note form
+                        (kits / mentorship / digital access / general fund).
                     </div>
                 </div>
         
@@ -133,78 +161,6 @@
 
         <div class="glow-divider"></div>
 
-        <!-- DONATION NOTE -->
-        <section class="section" id="note">
-            <div class="container split">
-                <div class="panel reveal donate-panel">
-                    <span class="tag">Donation note</span>
-                    <h2 style="margin:12px 0 8px;">Help us match your donation</h2>
-                    <p class="subhead" style="max-width:none;">
-                        Share amount + purpose (kits / mentorship / digital access / general fund). This helps us track
-                        and report your support clearly.
-                    </p>
-
-                    <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="Global Donation Note — Knowledge Home" />
-                        <input type="hidden" name="_template" value="table" />
-                        <input type="hidden" name="_captcha" value="false" />
-
-                        <input class="input" name="Name" placeholder="Full name" required />
-                        <input class="input" type="email" name="Email" placeholder="Email" required />
-
-                        <select class="input" name="Purpose" required>
-                            <option value="" selected disabled>Select purpose</option>
-                            <option>Learning kits</option>
-                            <option>Mentorship</option>
-                            <option>Digital access / devices</option>
-                            <option>Community learning sessions</option>
-                            <option>General fund</option>
-                        </select>
-
-                        <textarea class="input" name="Message" rows="5"
-                            placeholder="Amount + date + method (GoFundMe) + purpose (kits/mentorship/digital/general)…"></textarea>
-
-                        <button class="btn btn--primary" type="submit">Send note</button>
-                    </form>
-
-                    <div class="divider" style="margin:14px 0;"></div>
-                    <div class="soft" style="font-size:13px; line-height:1.6;">
-                        We keep updates human-friendly and protect privacy. We avoid personal identifiers and share
-                        proof where possible.
-                    </div>
-                </div>
-
-                <div class="panel reveal donate-panel">
-                    <span class="tag">What happens next</span>
-                    <div class="glow-divider"></div>
-                    <h2 style="margin:12px 0 8px;">After you donate</h2>
-                
-                    <p class="subhead" style="max-width:none;">
-                        We keep the process simple and human: no noise, no confusion.
-                    </p>
-                
-                    <ul class="list" style="margin-top:10px;">
-                        <li>We confirm your support by email</li>
-                        <li>Your note helps us allocate correctly</li>
-                        <li>Updates appear in the tracking feed</li>
-                        <li>Reports are shared periodically</li>
-                    </ul>
-                
-                    <div class="divider"></div>
-                
-                    <div class="soft" style="line-height:1.6;">
-                        For recurring donations, bulk sponsorships, or program partnerships,
-                        reach out; we’ll respond with a clear plan and reporting format.
-                    </div>
-                
-                    <div class="hero-actions" style="margin-top:14px;">
-                        <a class="btn btn--primary" href="contact.html">Contact us</a>
-                        <a class="btn" href="faq.html">Read FAQs</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
         <!-- ALLOCATION (BOTTOM) -->
         <section class="section">
