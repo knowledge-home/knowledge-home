@@ -32,20 +32,20 @@
         <!-- HERO -->
         <section class="section section--top">
             <div class="container">
-                <div class="kicker reveal">Donate (India) • UPI • QR • Razorpay</div>
+                <div class="kicker reveal">Donate (India) • UPI • QR</div>
 
                 <h1 class="h1 reveal"><span class="accent-word">Support learning</span> in minutes.</h1>
 
                 <p class="subhead reveal">
                     Knowledge Home helps learners access learning kits, mentorship, and digital learning, prioritizing
                     girls and
-                    underserved communities. Use UPI QR or Razorpay below. Add a short purpose note so we allocate
+                    underserved communities. Use UPI QR below. Add a short purpose note so we allocate
                     correctly.
                 </p>
 
                 <div class="hero-actions reveal">
                     <a class="btn btn--primary" href="#qr">Scan UPI QR</a>
-                    <a class="btn" href="#razorpay">Pay via Razorpay</a>
+                    <a class="btn" href="#note">Donation note</a>
                     <a class="btn" href="tracking.html">Tracking</a>
                     <a class="btn" href="donate.html">Back</a>
                 </div>
@@ -59,7 +59,7 @@
                     <div class="card">
                         <span class="tag">Simple</span>
                         <h3 style="margin-top:8px;">Fast & easy</h3>
-                        <p class="soft">UPI QR / Razorpay: no complicated steps.</p>
+                        <p class="soft">UPI QR: no complicated steps.</p>
                     </div>
                     <div class="card">
                         <span class="tag">Transparent</span>
@@ -102,36 +102,23 @@
                     </div>
                 </div>
 
-                <!-- Razorpay + Note -->
-                <div class="panel reveal donate-panel" id="razorpay">
-                    <span class="tag">Razorpay</span>
-                    <h2 style="margin:12px 0 8px;">UPI + cards (India)</h2>
-                    <p class="subhead" style="max-width:none;">
-                        Razorpay checkout can be connected here. For now, use the button to reach us and we’ll help you
-                        complete it.
-                    </p>
-
-                    <div class="hero-actions" style="margin-top:12px;">
-                        <a class="btn btn--primary" href="contact.html">Pay with Razorpay</a>
-                        <a class="btn" href="reports.html">Reports</a>
-                        <a class="btn" href="faq.html">FAQs</a>
-                    </div>
-
-                    <div class="divider"></div>
-
+                <div class="panel reveal donate-panel" id="note">
                     <span class="tag">Donation note</span>
-                    <p class="soft" style="margin:10px 0 12px;">
-                        Share the amount + purpose + date so we can match your donation in our tracking updates.
+                    <div class="glow-divider"></div>
+                    <h2 style="margin:12px 0 8px;">Help us track your support</h2>
+                    <p class="subhead" style="max-width:none;">
+                        After donating via UPI, please share the amount, date, and purpose so we can include it
+                        accurately in our tracking updates.
                     </p>
-
+                    <div class="glow-divider"></div>
                     <form class="form" action="https://formsubmit.co/knowledgehomeorg@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="India Donation Note — Knowledge Home" />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_captcha" value="false" />
-
+                
                         <input class="input" name="Name" placeholder="Full name" required />
                         <input class="input" type="email" name="Email" placeholder="Email" required />
-
+                
                         <select class="input" name="Purpose" required>
                             <option value="" selected disabled>Select purpose</option>
                             <option>Learning kits</option>
@@ -140,20 +127,19 @@
                             <option>Community learning sessions</option>
                             <option>General fund</option>
                         </select>
-
+                
                         <textarea class="input" name="Message" rows="5"
                             placeholder="Amount (₹) + date + purpose + any note…"></textarea>
-
+                
                         <button class="btn btn--primary" type="submit">Send note</button>
                     </form>
-
+                
                     <div class="divider" style="margin:14px 0;"></div>
-
+                
                     <div class="soft" style="font-size:13px; line-height:1.6;">
-                        We keep updates clear. We avoid sharing sensitive personal details and prioritize learner
-                        dignity.
+                        We respect privacy and share only aggregated, human-friendly updates.
                     </div>
-                </div>
+                </div>                
             </div>
         </section>
 
@@ -196,6 +182,7 @@
 
                         <div class="panel reveal">
                             <span class="tag">Explore</span>
+                            <div class="glow-divider"></div>
                             <h3 style="margin:10px 0 8px;">See tracking and reports</h3>
                             <p class="soft" style="margin:0;">
                                 Want to see updates and summaries? We keep it readable and consistent.

@@ -32,7 +32,7 @@
         <!-- HERO -->
         <section class="section section--top">
             <div class="container">
-                <div class="kicker reveal">Donate (Global) • card • PayPal • Zelle</div>
+                <div class="kicker reveal">Donate (Global) • GoFundMe • secure checkout</div>
                 <h1 class="h1 reveal"><span class="accent-word">Support learning</span> from anywhere.</h1>
                 <p class="subhead reveal">
                     Knowledge Home helps learners access learning kits, mentorship, and digital learning, prioritizing
@@ -42,11 +42,13 @@
                 </p>
 
                 <div class="hero-actions reveal">
-                    <a class="btn btn--primary" href="#zelle">Zelle QR</a>
-                    <a class="btn" href="#methods">Card / PayPal</a>
-                    <a class="btn" href="#note">Donation note</a>
+                    <a class="btn btn--primary" href="https://gofund.me/f72bc2300" target="_blank" rel="noopener">
+                        Donate (US & Global)
+                    </a>
+                
+                    <a class="btn" href="#note">Leave a donation note</a>
                     <a class="btn" href="donate.html">Back</a>
-                </div>
+                </div>        
 
                 <div class="grid3 section--tight reveal" style="margin-top:16px; gap:12px;">
                     <div class="card">
@@ -71,118 +73,63 @@
         <div class="glow-divider"></div>
 
         <!-- DONATION METHODS (TOP) -->
-        <section class="section" id="zelle">
+        <section class="section" id="methods">
             <div class="container split">
-
-                <!-- Zelle QR -->
+        
+                <!-- GoFundMe -->
                 <div class="panel reveal donate-panel">
-                    <span class="tag">Zelle</span>
-                    <h2 style="margin:12px 0 8px;">Zelle QR (US)</h2>
+                    <span class="tag">Global donations</span>
+                    <div class="glow-divider"></div>
+                    <h2 style="margin:12px 0 8px;">Donate securely via GoFundMe</h2>
                     <p class="subhead" style="max-width:none;">
-                        Open your banking app → Zelle → scan QR → send. After payment, submit a short note so we can
-                        allocate correctly.
+                        GoFundMe supports global card payments and provides donation protection. After donating, please leave a
+                        short
+                        note so we can allocate your support correctly (kits / mentorship / digital access / general fund).
                     </p>
-
-                    <div class="qr-box qr-box--big" style="margin-top:12px;">
-                        <img src="assets/img/qr.png" alt="Zelle QR code">
-                        <div class="hero-actions qr-download">
-                            <a class="btn" href="assets/img/qr.png" download="KnowledgeHome-UPI-QR.png">
-                                Download QR code
-                            </a>
-                        </div>                          
+        
+                    <div class="hero-actions" style="margin-top:12px;">
+                        <a class="btn btn--primary" href="https://gofund.me/c0747c0a6" target="_blank" rel="noopener">
+                            Donate on GoFundMe
+                        </a>
+                        <a class="btn" href="#note">Leave a note</a>
                     </div>
-
+        
                     <div class="divider" style="margin:14px 0;"></div>
-
+        
                     <div class="soft" style="line-height:1.6;">
-                        <b style="color:rgba(245,246,247,.92)">Tip:</b> If your app asks for a memo, add a short purpose
-                        (kits / mentorship / digital access).
+                        <b style="color:rgba(245,246,247,.92)">Note:</b> Donations made on GoFundMe are not currently
+                        tax-deductible in
+                        the U.S. We share updates that are simple, human-friendly, and privacy-safe.
                     </div>
                 </div>
-
-                <!-- Card/PayPal/Transfer -->
-                <div class="panel reveal donate-panel" id="methods">
-                    <span class="tag">Card / PayPal</span>
-
-                    <div class="payhead">
-                        <div>
-                            <h2 class="paytitle">Pay with card or PayPal</h2>
-                            <p class="subhead" style="max-width:none; margin:0;">
-                                These buttons are UI-ready today and can be connected to live checkout later.
-                                For bank transfer or sponsorship, request details.
-                            </p>
-                        </div>
+        
+                <!-- Optional: Keep “contact for partnerships” -->
+                <div class="panel reveal donate-panel">
+                    <span class="tag">Partnerships</span>
+                    <div class="glow-divider"></div>
+                    <h2 style="margin:12px 0 8px;">Sponsors & bulk support</h2>
+                    <p class="subhead" style="max-width:none;">
+                        If you represent a school, NGO, or company and want to sponsor kits, devices, or mentorship programs,
+                        contact
+                        us. We’ll share a clear plan and reporting format.
+                    </p>
+        
+                    <div class="hero-actions" style="margin-top:12px;">
+                        <a class="btn btn--primary" href="contact.html">Contact us</a>
+                        <a class="btn" href="reports.html">View reports</a>
                     </div>
-
-                    <div class="paygrid">
-                        <!-- Stripe -->
-                        <article class="paycard paycard--stripe">
-                            <div class="paycard__top">
-                                <div class="paykicker">CARD</div>
-                                <div class="paybrand">Stripe</div>
-                                <div class="paydesc">
-                                    Visa, Mastercard, and AmEx for secure global card payments.
-                                </div>
-                            </div>
-                        
-                            <div class="paycard__cta">
-                                <a class="btn btn--primary paybtn" href="contact.html">Pay with card</a>
-                            </div>
-                        
-                            <div class="payfine">
-                                Works for one-time or recurring donations, supports worldwide.
-                            </div>
-                        </article>                          
-
-                        <!-- PayPal -->
-                        <article class="paycard paycard--paypal">
-                            <div class="paycard__top">
-                                <div class="paykicker">PAYPAL</div>
-                                <div class="paybrand">Intl.</div>
-                                <div class="paydesc">
-                                    Fast and familiar option for international supporters worldwide.
-                                </div>
-                            </div>
-                        
-                            <div class="paycard__cta">
-                                <a class="btn btn--primary paybtn" href="contact.html">Pay with PayPal</a>
-                            </div>
-                        
-                            <div class="payfine">
-                                Ideal for quick global transfers without sharing card details.
-                            </div>
-                        </article>                          
-
-                        <!-- Transfer -->
-                        <article class="paycard paycard--transfer">
-                            <div class="paycard__top">
-                                <div class="paykicker">TRANSFER</div>
-                                <div class="paybrand">Bank</div>
-                                <div class="paydesc">
-                                    Designed for organizations, sponsors, and higher-value contributions.
-                                </div>
-                            </div>
-                        
-                            <div class="paycard__cta">
-                                <a class="btn btn--primary paybtn" href="contact.html">Request details</a>
-                            </div>
-                        
-                            <div class="payfine">
-                                Best for bulk donations, campaigns, or partnerships.
-                            </div>
-                        </article>                          
-                    </div>
-
-                    <div class="divider" style="margin:16px 0;"></div>
-
+        
+                    <div class="divider" style="margin:14px 0;"></div>
+        
                     <div class="soft" style="line-height:1.6;">
-                        For recurring donations, bulk sponsorship, or campaign partnerships, contact us and we’ll share a
-                        simple plan and reporting format.
+                        We do not accept personal Zelle/Venmo/PayPal links on the website. Global donations are processed
+                        through
+                        trusted platforms.
                     </div>
                 </div>
-
+        
             </div>
-        </section>
+        </section>          
 
         <div class="glow-divider"></div>
 
@@ -215,7 +162,7 @@
                         </select>
 
                         <textarea class="input" name="Message" rows="5"
-                            placeholder="Amount + date + method (Zelle/PayPal/Card) + any note…"></textarea>
+                            placeholder="Amount + date + method (GoFundMe) + purpose (kits/mentorship/digital/general)…"></textarea>
 
                         <button class="btn btn--primary" type="submit">Send note</button>
                     </form>
@@ -229,7 +176,7 @@
 
                 <div class="panel reveal donate-panel">
                     <span class="tag">What happens next</span>
-                
+                    <div class="glow-divider"></div>
                     <h2 style="margin:12px 0 8px;">After you donate</h2>
                 
                     <p class="subhead" style="max-width:none;">
@@ -298,6 +245,7 @@
 
                         <div class="panel reveal">
                             <span class="tag">What’s next</span>
+                            <div class="glow-divider"></div>
                             <h3 style="margin:10px 0 8px;">From preview → real-time tracking</h3>
                             <p class="soft" style="margin:0;">
                                 Connect payments → database → dashboards, so allocations and updates refresh
